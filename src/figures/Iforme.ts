@@ -1,4 +1,4 @@
 export interface Iforme {
     calculerAire(): number;
-    calculerAire(): number;
+    calculerPerimetre(): number;
 }

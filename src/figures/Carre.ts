@@ -1,24 +1,24 @@
 import { Iforme } from "./Iforme";
 
-class Carre implements Iforme {
-    private _longeurCote: number;
+export class Carre implements Iforme {
+    private _cote: number;
 
-    constructor(longeurCote:number) {
-        this._longeurCote = longeurCote;
+    constructor(cote:number) {
+        this._cote = cote;
     }
 
     public calculerAire() : number{
-        return this.longeurCote ^ 2; // C x C
+        return this.cote ^ 2; // C x C
     }
 
     public calculerPerimetre() : number{
-        return this.longeurCote * 4; // C x 4
+        return this.cote * 4; // C x 4
     }
    
-    public get longeurCote(): number {
-        return this._longeurCote;
+    public get cote(): number {
+        return this._cote;
     }
-    public set longeurCote(value: number) {
-        this._longeurCote = value;
+    public set cote(value: number) {
+        this._cote = value;
     }
 }

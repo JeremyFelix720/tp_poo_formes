@@ -1,6 +1,6 @@
 import { Iforme } from "./Iforme";
 
-class Cercle implements Iforme {
+export class Cercle implements Iforme {
    private _rayon: number;
    private static _pi: number;
 
@@ -14,7 +14,7 @@ class Cercle implements Iforme {
    }
 
    public calculerPerimetre() : number{
-      return 2 * Cercle._pi * this.rayon; // 2 x π x R
+      return Math.round((2 * Cercle._pi * this.rayon)*100)/100; // 2 x π x R
    }
 
    public get rayon(): number {
