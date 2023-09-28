@@ -85,4 +85,4 @@ console.log("Périmètre de quadrilatere1 : " + quadrilatere1.calculerPerimetre(
 console.log("Somme de l'aire et du périmètre de pentagoneR1 : " + PentagoneR.calculerSommeAirePerimetre(pentagoneR1.calculerAire(), pentagoneR1.calculerPerimetre()));
 
 let quadrilatere2: Iforme = new Quadrilatere(5, 4, 5, 4);
-console.log("nombreQuadrilatere2 : " + Quadrilatere.nombreQuadrilatere); // 2
+console.log("nombreQuadrilatere2 : " + Quadrilatere.nombreQuadrilatere); // 2 
