@@ -1,10 +1,12 @@
 import { Iforme } from "./Iforme";
 
-export class PentagoneR implements Iforme {    
+export class PentagoneR implements Iforme {
+    static nombrePentagoneR: number = 0;
     private _cote: number;
     private _hauteur: number;
 
     constructor(cote:number, hauteur:number) {
+        PentagoneR.nombrePentagoneR++;
         this._cote = cote;
         this._hauteur = hauteur;
     }
@@ -15,6 +17,10 @@ export class PentagoneR implements Iforme {
 
     public calculerPerimetre() : number{
         return 5 * this.cote; // 5 x C
+    }
+
+    static calculerSommeAirePerimetre(aire: number, perimetre: number) {
+        return aire + perimetre;
     }
    
     public get cote(): number {

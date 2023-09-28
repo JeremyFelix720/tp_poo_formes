@@ -1,10 +1,12 @@
 import { Iforme } from "./Iforme";
 
 export class Losange implements Iforme {
+    static nombreLosange: number = 0;
     private _petiteDiagonale: number;
     private _grandeDiagonale: number;
 
     constructor(petiteDiagonale: number, grandeDiagonale: number) {
+        Losange.nombreLosange++;
         this._petiteDiagonale = petiteDiagonale,
         this._grandeDiagonale = grandeDiagonale
     }
@@ -15,7 +17,11 @@ export class Losange implements Iforme {
 
     public calculerPerimetre(): number{
        return Math.round((2 * Math.sqrt(this._petiteDiagonale ^ 2 + this._grandeDiagonale ^ 2))*100)/100; // 2 x √(d ^ 2 + D ^ 2);
-   }
+    }
+
+    static calculerSommeAirePerimetre(aire: number, perimetre: number) {
+        return aire + perimetre;
+    }
 
     public get petiteDiagonale(): number {
         return this._petiteDiagonale;

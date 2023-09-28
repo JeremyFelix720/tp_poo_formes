@@ -1,12 +1,14 @@
 import { Iforme } from "./Iforme";
 
 export class Quadrilatere implements Iforme {
+    static nombreQuadrilatere: number = 0;
     private _cote1: number;
     private _cote2: number;
     private _cote3: number;
     private _cote4: number;
 
     constructor(cote1: number, cote2: number, cote3: number, cote4: number) {
+        Quadrilatere.nombreQuadrilatere++;
         this._cote1 = cote1;
         this._cote2 = cote2;
         this._cote3 = cote3;
@@ -21,6 +23,10 @@ export class Quadrilatere implements Iforme {
 
     public calculerPerimetre() : number{
         return this.cote1 + this.cote2 + this.cote3 + this.cote4 ; // C1 + C2 + C3 + C4
+    }
+
+    static calculerSommeAirePerimetre(aire: number, perimetre: number) {
+        return aire + perimetre;
     }
 
     public get cote1(): number {
